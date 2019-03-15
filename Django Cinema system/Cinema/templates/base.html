@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link type="image/x-icon" rel="shortcut icon" href="{% static 'img/ico1.ico' %}">
+    {% block template %}{% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="back">
+</div>
+<div class="container cont_one">
+    <div class="top">
+	<p class="h1">
+		<a href="/">КИНОТЕАТР</a>
+	</p>
+	<p class="h2">
+		ДЛЯ ВЗРОСЛЫХ И ДЕТЕЙ
+	</p>
+    </div>
+	<div class="header">
+		<div id="myCarousel" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="active item"><img src="{% static 'img/9.png' %}"></div>
+				<div class="item"><img src="{% static 'img/kar1.jpg' %}"></div>
+				<div class="item"><img src="{% static 'img/kar2.jpg' %}"></div>
+				<div class="item"><img src="{% static 'img/kar3.jpg' %}"></div>
+                <div class="item"><img src="{% static 'img/kar4.jpg' %}"></div>
+			</div>
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+    {% block navbar %}{% endblock %}
+    <div class="body">
+		<p class="body_p">
+		</p>
+    {% block content %}{% endblock %}
+        <div class="footer">
+            <p class="foot">
+            С 9 июля
+                <a href="http://www.kinofilms.ua/movie/89424_Now_You_See_Me2/" class="foot_a">Иллюзия обмана 2</a>
+                в нашем Кинотеатре
+            <br>
+            Всю информацию по работе театра вы можете узнать по номерам (061) 701-73-89, 220-17-56
+            <br>
+            Copyright 2016 <a href="#" class="foot_a">Кинотеатр</a>, Запорожье, пр. Ленина 167.
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/2.2.0/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
